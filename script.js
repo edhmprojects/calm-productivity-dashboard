@@ -20,3 +20,5 @@ function displayQuote() {
 }
 
 displayQuote();
+// update quote every 3 minutes
+setInterval(displayQuote, 180000);
