@@ -1,3 +1,4 @@
+// QUOTE GENERATOR
 // list of quotes for random quote generator
 const quotes = [
   "You can do this.",
@@ -22,3 +23,24 @@ function displayQuote() {
 displayQuote();
 // update quote every 3 minutes
 setInterval(displayQuote, 180000);
+
+// TO-DO LIST
+const todoInput = document.getElementById("todoInput");
+const addTodoButton = document.getElementById("addTodo");
+const todoList = document.getElementById("todoList");
+
+function addTodo() {
+  const todoText = todoInput.value.trim();
+  if (todoText === "") return;
+
+  const li = document.createElement("li");
+  li.textContent = todoText;
+
+  li.addEventListener("click", () => {
+    li.classList.toggle("completed");
+  });
+
+  todoList.appendChild(li);
+  todoInput.value = "";
+}
+addTodoButton.addEventListener("click", addTodo);

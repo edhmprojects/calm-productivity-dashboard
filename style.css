@@ -1,0 +1,14 @@
+/* Completed task styling */
+#todoList li.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* To‑Do List interactions */
+#todoList li {
+  cursor: pointer;
+}
+
+#todoList li:hover {
+  background-color: #f5f5f5;
+}
